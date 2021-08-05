@@ -52,4 +52,13 @@ export default [
       filesize(),
     ],
   },
+  {
+      input: `./src/cannon-es`,
+      output: {
+        file: `dist/cannon-es.std.js`,
+        format: 'iife',
+        name: "CANNON"
+      },
+      plugins: [json(), resolve({ extensions }), babel(babelOptions), filesize()]
+  }
 ]
